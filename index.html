@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>To Do List</title>
+        <link href="style.css" rel="stylesheet"/>
+        <link href="../../Font awesome/css/all.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <input type="color">
+        <div class="container">
+            <div class="add-task">
+                <input type="text" name="task" placeholder="Type What You Are Planning To Do...">
+                <span class="add-button-symbol">+</span>
+            </div>
+            <div class="tasks-content">
+                <div class="no-tasks-content">There Is No Tasks Right Now</div>
+            </div>
+            <div class="tasks-count">
+                <span class="tasks-num"><span>Tasks</span><output>0</output></span>
+                <span class="buttons">
+                    <span class="delete-all-button">Delete All</span>
+                    <span class="complete-all-button">Complete All</span>
+                </span>
+                <span class="completed"><span>Completed</span><output>0</output></span>
+            </div>
+        </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

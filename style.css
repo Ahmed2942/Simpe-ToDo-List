@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #3f9edd;
+}
+span, output {
+    display: inline-block;
+}
+span[class*="button"] {
+    cursor: pointer;
+    user-select: none;
+}
+span[class$="button"] {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    color: #fff;
+}
+body {
+    font-family: tahoma, Helvetica, sans-serif;
+    line-height: 1.4em;
+}
+.container {
+    width: 960px;
+    padding: 40px;
+    margin: auto;
+    background-color: #efefef;
+}
+.container > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+input {
+    outline: none;
+    border: 0;
+}
+.add-task {
+    position: relative;
+}
+.add-task input {
+    height: 40px;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+.add-task .add-button-symbol {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 40px;
+    line-height: 35px;
+    text-align: center;
+}
+.add-task .add-button-symbol:hover {
+    transform: rotate(90deg);
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+}
+.tasks-content .task, .tasks-content .no-tasks-content {
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+    background-color: #fff;
+    text-align: justify;
+    overflow-y: auto;
+}
+.tasks-content .no-tasks-content.hidden {
+    display: none;
+}
+.tasks-content .task p.completed {
+    text-decoration: line-through;
+}
+.tasks-content .task .delete-button {
+   float: right;
+}
+.tasks-count {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    
+}
+.tasks-count > span:not(.buttons) {
+    font-size: 18px;
+}
+.tasks-count > .buttons {
+    width: 30%;
+    text-align: center;
+}
+.tasks-count .tasks-num output, .tasks-count .completed output {
+    padding: 6px 0;
+    width: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--main-color);
+    margin-left: 5px;
+}
